@@ -40,6 +40,7 @@ public class Aircraft {
 		
 	}
 	private long NextId() {
+		return Id;
 		
 		
 	}
