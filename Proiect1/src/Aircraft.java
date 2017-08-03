@@ -32,11 +32,8 @@ public class Aircraft {
 	}
 	public Aircraft( String name, Coordinates coordinates) {
 		
-		
 		this.name = name;
 		this.coordinates = coordinates;
-		
-		
 		
 	}
 	private long NextId() {

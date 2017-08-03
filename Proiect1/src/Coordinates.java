@@ -28,4 +28,8 @@ public class Coordinates {
 		this.longitude=longitude;
 		this.height=height;
 	}
+	
+	public static Coordinates makeCoordonate(int longitude, int latitude, int height) {
+		return new Coordinates(longitude, latitude, height);
+	}
 }

@@ -6,15 +6,8 @@ public class JetPlane extends Aircraft  implements Flyable{
 	public JetPlane( String name, Coordinates coordinates) {
 		super( name, coordinates);
 		
-		public void	updateConditions() {
-			
-		}
-		
-		public void registerTower(WeatherTower weatherTower) {
-			
-		}
-		
 	}
+	
 
 	public void updateConditions() {
 		// TODO Auto-generated method stub
@@ -22,9 +15,9 @@ public class JetPlane extends Aircraft  implements Flyable{
 	}
 
 	public void registerTower(WeatherTower weatherTower) {
-		// TODO Auto-generated method stub
 		
-	}
+		System.out.println("Jet plane has been registered");	
+		}
 	
 
 }

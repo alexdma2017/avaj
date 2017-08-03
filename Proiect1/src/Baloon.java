@@ -6,16 +6,9 @@ public class Baloon extends Aircraft  implements Flyable {
 	public Baloon( String name, Coordinates coordinates) {
 		super( name, coordinates);
 	
-	public void	updateConditions() {
 		
 	}
 	
-	public void registerTower( WeatherTower weatherTower) {
-		
-		
-	}
-		
-}
 
 	public void updateConditions() {
 		// TODO Auto-generated method stub
@@ -23,7 +16,8 @@ public class Baloon extends Aircraft  implements Flyable {
 	}
 
 	public void registerTower(WeatherTower weatherTower) {
-		// TODO Auto-generated method stub
+		
+		System.out.println("Baloon has been registered");
 		
 	}
 	
