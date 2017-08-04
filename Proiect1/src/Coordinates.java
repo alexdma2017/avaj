@@ -29,7 +29,7 @@ public class Coordinates {
 		this.height=height;
 	}
 	
-	public static Coordinates makeCoordonate(int longitude, int latitude, int height) {
+	public static Coordinates makeCoordinate(int longitude, int latitude, int height) {
 		return new Coordinates(longitude, latitude, height);
 	}
 }

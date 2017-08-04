@@ -3,7 +3,7 @@ public abstract class AircraftFactory {
 	
 	public Flyable newAircraft (String type, String name, int longitude, int latitude, int height){
 		
-		Coordinates coord = Coordinates.makeCoordonate(longitude, latitude, height);
+		Coordinates coord = Coordinates.makeCoordinate(longitude, latitude, height);
 		
 		
 		if (type.equals("Baloon") || type.equals("baloon")) {

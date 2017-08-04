@@ -5,18 +5,15 @@ public class Baloon extends Aircraft  implements Flyable {
 
 	public Baloon( String name, Coordinates coordinates) {
 		super( name, coordinates);
-	
-		
 	}
 	
-
 	public void updateConditions() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	public void registerTower(WeatherTower weatherTower) {
-		
+		weatherTower.register(this);
 		System.out.println("Baloon has been registered");
 		
 	}
