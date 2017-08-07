@@ -7,7 +7,6 @@ public class Aircraft {
 	protected String name;
 	protected Coordinates coordinates;
 	private long idCounter;
-	ArrayList<Integer> idList = new ArrayList<Integer>();
 	
 	public long getId() {
 		return Id;
@@ -40,25 +39,14 @@ public class Aircraft {
 		
 	}
 	
-	private void genIdList() {
-        for (int i=1; i<10; i++) {
-            idList.add(new Integer(i));
-        }
-        
-	}
+
 	
 	private long NextId() {
-        Collections.shuffle(idList);
-        int i=0;
-        for (int element : idList) {
-            Id = idList.get(i);
-            i++;
-        }
-		
-		return Id;
-		
-		
-	}
+        Id = getIdCounter() +1;
+        setIdCounter(getIdCounter()+1);
+        return Id;
+    }
+	
 	
 	
 	
