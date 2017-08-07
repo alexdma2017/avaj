@@ -1,7 +1,10 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class Baloon extends Aircraft  implements Flyable {
 	
 	private WeatherTower weatherTower;
+	private String text;
 
 	public Baloon( String name, Coordinates coordinates) {
 		super( name, coordinates);
@@ -11,16 +14,40 @@ public class Baloon extends Aircraft  implements Flyable {
 		String newWeather = weatherTower.getWeather(coordinates);
 		if (newWeather.equals(WeatherType.FOG)) {
 			coordinates.setHeight(coordinates.getHeight()-3);
+			text ="Baloon #" + this.getName() + "(" + this.getId() + "): get us lower, we are flying through pea soup";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 		else if(newWeather.equals(WeatherType.RAIN)){
 			coordinates.setHeight(coordinates.getHeight()-5);
+			text ="Baloon #" + this.getName() + "(" + this.getId() + "): descending will not make us any less wet";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 		else if(newWeather.equals(WeatherType.SUN)){
 			coordinates.setHeight(coordinates.getHeight()+4);
 			coordinates.setLongitude(coordinates.getLongitude()+2);
+			text ="Baloon #" + this.getName() + "(" + this.getId() + "): make twoards the rising sun";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 		else if(newWeather.equals(WeatherType.SNOW)){
 			coordinates.setHeight(coordinates.getHeight()-15);
+			text ="Baloon #" + this.getName() + "(" + this.getId() + "): this thing does not run a cold air";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 		
 		if(coordinates.getHeight()<0) {
@@ -30,18 +57,25 @@ public class Baloon extends Aircraft  implements Flyable {
 			coordinates.setHeight(100);
 		}
 		if (coordinates.getHeight()==0) {
-			weatherTower.unregister(this); //de vazut
-			System.out.println("Baloon #" + this.getName() + "(" + this.getId() + "): has been unrergistered");
+			weatherTower.unregister(this);
+			String text ="Tower Says: Baloon #" + this.getName() + "(" + this.getId() + "): has been unrergistered";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
 	public void registerTower(WeatherTower weatherTower) {
 		weatherTower.register(this);
-		System.out.println("Baloon #" + this.getName() + "(" + this.getId() + "): registered to weather tower");
+		text ="Tower Says: Baloon #" + this.getName() + "(" + this.getId() + "): registered to weather tower";
+		try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+		    out.println(text);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		
 	}
-	
-	
-	
 
 }

@@ -2,8 +2,13 @@
 public class program {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		readFile input = new readFile();
+		writeFile output = new writeFile();
+		
+		input.fileReader();
+		output.fileWriter();
+		
 	}
 
 }

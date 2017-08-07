@@ -1,7 +1,10 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class Helicopter extends Aircraft implements Flyable{
 	
 	private WeatherTower weatherTower;
+	private String text;
 
 	public Helicopter( String name, Coordinates coordinates) {
 		super( name, coordinates);	
@@ -11,13 +14,31 @@ public class Helicopter extends Aircraft implements Flyable{
 		String newWeather = weatherTower.getWeather(coordinates);
 		if (newWeather.equals(WeatherType.FOG)) {
 			coordinates.setLongitude(coordinates.getLongitude()+1);
+			text ="Helicopter #" + this.getName() + "(" + this.getId() + "): silly fog, I can just fly over you";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 		else if(newWeather.equals(WeatherType.RAIN)){
 			coordinates.setLongitude(coordinates.getLongitude()+5);
+			text ="Helicopter #" + this.getName() + "(" + this.getId() + "): helicopters are not afraid to get wet";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 		else if(newWeather.equals(WeatherType.SUN)){
 			coordinates.setHeight(coordinates.getHeight()+2);
 			coordinates.setLongitude(coordinates.getLongitude()+10);
+			text ="Helicopter #" + this.getName() + "(" + this.getId() + "): it's snowing, move to intercept Santa Claus";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 		else if(newWeather.equals(WeatherType.SNOW)){
 			coordinates.setHeight(coordinates.getHeight()-12);
@@ -31,7 +52,12 @@ public class Helicopter extends Aircraft implements Flyable{
 		}
 		if (coordinates.getHeight()==0) {
 			weatherTower.unregister(this); //de vazut
-			System.out.println("Helicopter #" + this.getName() + "(" + this.getId() + "): has been unrergistered");
+			text ="Tower says: Helicopter #" + this.getName() + "(" + this.getId() + "): has been unrergistered";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 				
@@ -39,7 +65,12 @@ public class Helicopter extends Aircraft implements Flyable{
 
 	public void registerTower(WeatherTower weatherTower) {
 		weatherTower.register(this);
-		System.out.println("Helicopter #" + this.getName() + "(" + this.getId() + "): registered to weather tower");
+		text ="Tower says: Helicopter #" + this.getName() + "(" + this.getId() + "): has been rergistered";
+		try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+		    out.println(text);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		
 	}
 	
