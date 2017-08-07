@@ -31,7 +31,7 @@ public abstract class Tower{
 	}
 	
 	protected void conditionsChanged(){
-		if()
+		
 		notifyAircraft();
 	}
 }

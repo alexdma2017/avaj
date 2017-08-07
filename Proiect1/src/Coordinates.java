@@ -7,26 +7,23 @@ public class Coordinates {
 	public int getLongitude() {
 		return longitude;
 	}
-	/*private void setLongitude(int longitude) {
+	public void setLongitude(int longitude) {
 		this.longitude = longitude;
-	}*/
+	}
 	public int getLatitude() {
 		return latitude;
 	}
-	/*private void setLatitude(int latitude) {
+	public void setLatitude(int latitude) {
 		this.latitude = latitude;
-	}*/
+	}
 	public int getHeight() {
 		return height;
 	}
-	/*private void setHeight(int height) {
+	public void setHeight(int height) {
 		this.height = height;
-	}*/
+	}
 	
 	private Coordinates(int latitude, int longitude, int height){
-		this.latitude=latitude;
-		this.longitude=longitude;
-		this.height=height;
 	}
 	
 	public static Coordinates makeCoordinate(int longitude, int latitude, int height) {
