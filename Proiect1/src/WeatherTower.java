@@ -5,7 +5,7 @@ public class WeatherTower extends Tower {
 	}
 	
 	private void changeWeather(){
-		notifyAircraft();
+		conditionsChanged();
 	}
 
 }

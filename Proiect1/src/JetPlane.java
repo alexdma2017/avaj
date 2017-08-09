@@ -14,7 +14,10 @@ public class JetPlane extends Aircraft  implements Flyable{
 
 	public void updateConditions() {
 		String newWeather = weatherTower.getWeather(coordinates);
-		if (newWeather.equals(WeatherType.FOG)) {
+		
+		switch(newWeather) {
+		
+		case WeatherType.FOG:
 			coordinates.setLatitude(coordinates.getLatitude()+1);
 			text ="JetPlane #" + this.getName() + "(" + this.getId() + "): it's really foggy down there";
 			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
@@ -22,8 +25,9 @@ public class JetPlane extends Aircraft  implements Flyable{
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		}
-		else if(newWeather.equals(WeatherType.RAIN)){
+		break;
+		
+		case WeatherType.RAIN:
 			coordinates.setLatitude(coordinates.getLatitude()+5);
 			text ="JetFighter #" + this.getName() + "(" + this.getId() + "): it's raining hard here";
 			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
@@ -31,8 +35,9 @@ public class JetPlane extends Aircraft  implements Flyable{
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		}
-		else if(newWeather.equals(WeatherType.SUN)){
+		break;
+		
+		case WeatherType.SUN:
 			coordinates.setHeight(coordinates.getHeight()+2);
 			coordinates.setLatitude(coordinates.getLatitude()+10);
 			text ="JetFighter #" + this.getName() + "(" + this.getId() + "): flying in the sun is so much fun";
@@ -41,8 +46,9 @@ public class JetPlane extends Aircraft  implements Flyable{
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		}
-		else if(newWeather.equals(WeatherType.SNOW)){
+		break;
+		
+		case WeatherType.SNOW:
 			coordinates.setHeight(coordinates.getHeight()-7);
 			text ="JetFighter #" + this.getName() + "(" + this.getId() + "): that thing about winter that guy from that tv show once said";
 			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
@@ -50,6 +56,7 @@ public class JetPlane extends Aircraft  implements Flyable{
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
+		break;
 		}
 		
 		if(coordinates.getHeight()<0) {

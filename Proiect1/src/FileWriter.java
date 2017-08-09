@@ -1,7 +1,6 @@
 import java.io.File;
-import java.io.PrintWriter;
 
-public class writeFile {	
+public class FileWriter {	
 	
 	public void fileWriter(){
 		try {

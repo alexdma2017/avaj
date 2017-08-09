@@ -12,7 +12,10 @@ public class Helicopter extends Aircraft implements Flyable{
 
 	public void updateConditions() {
 		String newWeather = weatherTower.getWeather(coordinates);
-		if (newWeather.equals(WeatherType.FOG)) {
+		
+		switch(newWeather) {
+		
+		case WeatherType.FOG:
 			coordinates.setLongitude(coordinates.getLongitude()+1);
 			text ="Helicopter #" + this.getName() + "(" + this.getId() + "): silly fog, I can just fly over you";
 			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
@@ -20,8 +23,9 @@ public class Helicopter extends Aircraft implements Flyable{
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		}
-		else if(newWeather.equals(WeatherType.RAIN)){
+		break;
+		
+		case WeatherType.RAIN:
 			coordinates.setLongitude(coordinates.getLongitude()+5);
 			text ="Helicopter #" + this.getName() + "(" + this.getId() + "): helicopters are not afraid to get wet";
 			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
@@ -29,20 +33,31 @@ public class Helicopter extends Aircraft implements Flyable{
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		}
-		else if(newWeather.equals(WeatherType.SUN)){
+		break;
+		
+		case WeatherType.SUN:
 			coordinates.setHeight(coordinates.getHeight()+2);
 			coordinates.setLongitude(coordinates.getLongitude()+10);
+			text ="Helicopter #" + this.getName() + "(" + this.getId() + "): the sun is blinding me";
+			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			    out.println(text);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		break;
+		
+		
+		case WeatherType.SNOW:
+			coordinates.setHeight(coordinates.getHeight()-12);
 			text ="Helicopter #" + this.getName() + "(" + this.getId() + "): it's snowing, move to intercept Santa Claus";
 			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
 			    out.println(text);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
+		break;
 		}
-		else if(newWeather.equals(WeatherType.SNOW)){
-			coordinates.setHeight(coordinates.getHeight()-12);
-		}
+		
 		
 		if(coordinates.getHeight()<0) {
 			coordinates.setHeight(0);

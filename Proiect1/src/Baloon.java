@@ -12,16 +12,21 @@ public class Baloon extends Aircraft  implements Flyable {
 	
 	public void updateConditions() {
 		String newWeather = weatherTower.getWeather(coordinates);
-		if (newWeather.equals(WeatherType.FOG)) {
+		
+		
+		switch(newWeather) {
+		
+		case WeatherType.FOG: 
 			coordinates.setHeight(coordinates.getHeight()-3);
 			text ="Baloon #" + this.getName() + "(" + this.getId() + "): get us lower, we are flying through pea soup";
-			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
+			try(PrintWriter out = new PrintWriter("Simulation.txt")){
 			    out.println(text);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		}
-		else if(newWeather.equals(WeatherType.RAIN)){
+			break;
+		
+		case WeatherType.RAIN:
 			coordinates.setHeight(coordinates.getHeight()-5);
 			text ="Baloon #" + this.getName() + "(" + this.getId() + "): descending will not make us any less wet";
 			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
@@ -29,8 +34,9 @@ public class Baloon extends Aircraft  implements Flyable {
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		}
-		else if(newWeather.equals(WeatherType.SUN)){
+			break;
+			
+		case WeatherType.SUN:
 			coordinates.setHeight(coordinates.getHeight()+4);
 			coordinates.setLongitude(coordinates.getLongitude()+2);
 			text ="Baloon #" + this.getName() + "(" + this.getId() + "): make twoards the rising sun";
@@ -39,8 +45,10 @@ public class Baloon extends Aircraft  implements Flyable {
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		}
-		else if(newWeather.equals(WeatherType.SNOW)){
+			break;
+			
+			
+		case WeatherType.SNOW:
 			coordinates.setHeight(coordinates.getHeight()-15);
 			text ="Baloon #" + this.getName() + "(" + this.getId() + "): this thing does not run a cold air";
 			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
@@ -48,8 +56,8 @@ public class Baloon extends Aircraft  implements Flyable {
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
+			break;
 		}
-		
 		if(coordinates.getHeight()<0) {
 			coordinates.setHeight(0);
 		}
