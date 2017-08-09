@@ -1,0 +1,24 @@
+Tower says: JetPlane #J01(0): has been rergistered
+Tower says: JetPlane #J02(0): has been rergistered
+Tower says: JetPlane #J03(0): has been rergistered
+Tower says: JetPlane #J04(0): has been rergistered
+Tower says: Helicopter #H01(0): has been rergistered
+Tower says: Helicopter #H02(0): has been rergistered
+Tower says: Helicopter #H03(0): has been rergistered
+Tower says: Helicopter #H04(0): has been rergistered
+Tower Says: Baloon #B01(0): registered to weather tower
+Tower Says: Baloon #B02(0): registered to weather tower
+Tower Says: Baloon #B03(0): registered to weather tower
+Tower Says: Baloon #B04(0): registered to weather tower
+Tower says: JetPlane #J01(0): has been rergistered
+Tower says: JetPlane #J02(0): has been rergistered
+Tower says: JetPlane #J03(0): has been rergistered
+Tower says: JetPlane #J04(0): has been rergistered
+Tower says: Helicopter #H01(0): has been rergistered
+Tower says: Helicopter #H02(0): has been rergistered
+Tower says: Helicopter #H03(0): has been rergistered
+Tower says: Helicopter #H04(0): has been rergistered
+Tower Says: Baloon #B01(0): registered to weather tower
+Tower Says: Baloon #B02(0): registered to weather tower
+Tower Says: Baloon #B03(0): registered to weather tower
+Tower Says: Baloon #B04(0): registered to weather tower

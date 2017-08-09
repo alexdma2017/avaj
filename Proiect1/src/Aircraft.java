@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 public class Aircraft {
 	
 	protected long  Id; 
@@ -33,19 +35,12 @@ public class Aircraft {
 		
 		this.name = name;
 		this.coordinates = coordinates;
-		
 	}
 	
-
-	
-	private long NextId() {
+	private long nextId() {
         Id = getIdCounter() +1;
-        setIdCounter(getIdCounter()+1);
+        idCounter++;
         return Id;
     }
-	
-	
-	
-	
 
 }

@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.PrintWriter;
 
 public class FileWriter {	
 	
@@ -8,13 +9,10 @@ public class FileWriter {
 			if(!file.exists()) {
 				file.createNewFile();
 			}
-			/*PrintWriter pw = new PrintWriter(file);
-			pw.println("Some files");
-			pw.println(1000);
-			pw.close();
-			System.out.println("Done!");*/
+
 		}
-		catch(Exception e) {e.printStackTrace();
+		catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 }

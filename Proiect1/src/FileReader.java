@@ -10,6 +10,7 @@ public class FileReader {
 	
 	public static List<String[]> fileList = new ArrayList<String[]>();
 	Boolean first;
+	
 	public void fileReader(String argument) throws TypeException, HeightException {
 		Path path = Paths.get(argument);
 		try {

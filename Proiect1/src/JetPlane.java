@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintWriter;
 
 public class JetPlane extends Aircraft  implements Flyable{
@@ -20,8 +21,8 @@ public class JetPlane extends Aircraft  implements Flyable{
 		case WeatherType.FOG:
 			coordinates.setLatitude(coordinates.getLatitude()+1);
 			text ="JetPlane #" + this.getName() + "(" + this.getId() + "): it's really foggy down there";
-			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
-			    out.println(text);
+			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
+				out.println(text);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -30,8 +31,8 @@ public class JetPlane extends Aircraft  implements Flyable{
 		case WeatherType.RAIN:
 			coordinates.setLatitude(coordinates.getLatitude()+5);
 			text ="JetFighter #" + this.getName() + "(" + this.getId() + "): it's raining hard here";
-			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
-			    out.println(text);
+			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
+				out.println(text);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -41,8 +42,8 @@ public class JetPlane extends Aircraft  implements Flyable{
 			coordinates.setHeight(coordinates.getHeight()+2);
 			coordinates.setLatitude(coordinates.getLatitude()+10);
 			text ="JetFighter #" + this.getName() + "(" + this.getId() + "): flying in the sun is so much fun";
-			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
-			    out.println(text);
+			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
+				out.println(text);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -51,8 +52,8 @@ public class JetPlane extends Aircraft  implements Flyable{
 		case WeatherType.SNOW:
 			coordinates.setHeight(coordinates.getHeight()-7);
 			text ="JetFighter #" + this.getName() + "(" + this.getId() + "): that thing about winter that guy from that tv show once said";
-			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
-			    out.println(text);
+			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
+				out.println(text);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -68,8 +69,8 @@ public class JetPlane extends Aircraft  implements Flyable{
 		if (coordinates.getHeight()==0) {
 			weatherTower.unregister(this); //de vazut
 			text ="Tower says: JetPlane #" + this.getName() + "(" + this.getId() + "): has been unrergistered";
-			try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
-			    out.println(text);
+			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
+				out.println(text);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -80,8 +81,8 @@ public class JetPlane extends Aircraft  implements Flyable{
 	public void registerTower(WeatherTower weatherTower) {
 		weatherTower.register(this);
 		text ="Tower says: JetPlane #" + this.getName() + "(" + this.getId() + "): has been rergistered";
-		try(PrintWriter out = new PrintWriter("Simulation.txt")  ){
-		    out.println(text);
+		try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
+			out.println(text);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

@@ -24,6 +24,9 @@ public class Coordinates {
 	}
 	
 	private Coordinates(int latitude, int longitude, int height){
+		   this.latitude = latitude;
+		   this.longitude= longitude;
+		   this.height= height;
 	}
 	
 	public static Coordinates makeCoordinate(int longitude, int latitude, int height) {
