@@ -32,7 +32,7 @@ public abstract class Tower{
 	
 	protected void conditionsChanged(){
 		
-		for(int i=0; i<=observerList.size(); i++) {
+		for(int i=0; i<observerList.size(); i++) {
 			observers=observerList.get(i);
 			observers.updateConditions();
 		}

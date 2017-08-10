@@ -6,12 +6,14 @@ public class Baloon extends Aircraft  implements Flyable {
 	
 	private WeatherTower weatherTower;
 	private String text;
+	private Boolean unregistered = false;
 
 	public Baloon( String name, Coordinates coordinates) {
 		super( name, coordinates);
 	}
 	
 	public void updateConditions() {
+		weatherTower=new WeatherTower();
 		String newWeather = weatherTower.getWeather(coordinates);
 		
 		
@@ -51,7 +53,7 @@ public class Baloon extends Aircraft  implements Flyable {
 			
 		case WeatherType.SNOW:
 			coordinates.setHeight(coordinates.getHeight()-15);
-			text ="Baloon #" + this.getName() + "(" + this.getId() + "): this thing does not run a cold air";
+			text ="Baloon #" + this.getName() + "(" + this.getId() + "): this thing does not run on cold air";
 			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
 				out.println(text);
 			} catch (FileNotFoundException e) {
@@ -67,12 +69,16 @@ public class Baloon extends Aircraft  implements Flyable {
 		}
 		if (coordinates.getHeight()==0) {
 			weatherTower.unregister(this);
+			unregistered = true;
 			String text ="Tower Says: Baloon #" + this.getName() + "(" + this.getId() + "): has been unrergistered";
 			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
 				out.println(text);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
+		}
+		if(unregistered.equals(true) && coordinates.getHeight()>0) {
+			registerTower(weatherTower);
 		}
 	}
 

@@ -1,24 +1,167 @@
-Tower says: JetPlane #J01(0): has been rergistered
-Tower says: JetPlane #J02(0): has been rergistered
-Tower says: JetPlane #J03(0): has been rergistered
-Tower says: JetPlane #J04(0): has been rergistered
-Tower says: Helicopter #H01(0): has been rergistered
-Tower says: Helicopter #H02(0): has been rergistered
-Tower says: Helicopter #H03(0): has been rergistered
-Tower says: Helicopter #H04(0): has been rergistered
-Tower Says: Baloon #B01(0): registered to weather tower
-Tower Says: Baloon #B02(0): registered to weather tower
-Tower Says: Baloon #B03(0): registered to weather tower
-Tower Says: Baloon #B04(0): registered to weather tower
-Tower says: JetPlane #J01(0): has been rergistered
-Tower says: JetPlane #J02(0): has been rergistered
-Tower says: JetPlane #J03(0): has been rergistered
-Tower says: JetPlane #J04(0): has been rergistered
-Tower says: Helicopter #H01(0): has been rergistered
-Tower says: Helicopter #H02(0): has been rergistered
-Tower says: Helicopter #H03(0): has been rergistered
-Tower says: Helicopter #H04(0): has been rergistered
-Tower Says: Baloon #B01(0): registered to weather tower
-Tower Says: Baloon #B02(0): registered to weather tower
-Tower Says: Baloon #B03(0): registered to weather tower
-Tower Says: Baloon #B04(0): registered to weather tower
+Tower says: JetPlane #J01(1): has been rergistered
+Tower says: JetPlane #J02(2): has been rergistered
+Tower says: JetPlane #J03(3): has been rergistered
+Tower says: JetPlane #J04(4): has been rergistered
+Tower says: Helicopter #H01(5): has been rergistered
+Tower says: Helicopter #H02(6): has been rergistered
+Tower says: Helicopter #H03(7): has been rergistered
+Tower says: Helicopter #H04(8): has been rergistered
+Tower Says: Baloon #B01(9): registered to weather tower
+Tower Says: Baloon #B02(10): registered to weather tower
+Tower Says: Baloon #B03(11): registered to weather tower
+Tower Says: Baloon #B04(12): registered to weather tower
+
+JetFighter #J01(1): flying in the sun is so much fun
+JetFighter #J02(2): it's raining hard here
+JetFighter #J03(3): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J03(3): has been unrergistered
+JetFighter #J04(4): it's raining hard here
+Helicopter #H01(5): silly fog, I can just fly over you
+Helicopter #H02(6): the sun is blinding me
+Helicopter #H03(7): helicopters are not afraid to get wet
+Helicopter #H04(8): it's snowing, move to intercept Santa Claus
+Baloon #B01(9): make twoards the rising sun
+Baloon #B02(10): this thing does not run on cold air
+Baloon #B03(11): get us lower, we are flying through pea soup
+Baloon #B04(12): get us lower, we are flying through pea soup
+JetFighter #J01(1): flying in the sun is so much fun
+JetFighter #J02(2): that thing about winter that guy from that tv show once said
+JetFighter #J03(3): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J03(3): has been unrergistered
+JetFighter #J04(4): that thing about winter that guy from that tv show once said
+Helicopter #H01(5): it's snowing, move to intercept Santa Claus
+Tower says: Helicopter #H01(5): has been unrergistered
+Helicopter #H02(6): silly fog, I can just fly over you
+Helicopter #H03(7): silly fog, I can just fly over you
+Helicopter #H04(8): it's snowing, move to intercept Santa Claus
+Baloon #B01(9): get us lower, we are flying through pea soup
+Baloon #B02(10): this thing does not run on cold air
+Tower Says: Baloon #B02(10): has been unrergistered
+Baloon #B03(11): get us lower, we are flying through pea soup
+Baloon #B04(12): get us lower, we are flying through pea soup
+JetFighter #J01(1): flying in the sun is so much fun
+JetFighter #J02(2): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J02(2): has been unrergistered
+JetFighter #J03(3): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J03(3): has been unrergistered
+JetFighter #J04(4): that thing about winter that guy from that tv show once said
+Helicopter #H01(5): it's snowing, move to intercept Santa Claus
+Tower says: Helicopter #H01(5): has been unrergistered
+Helicopter #H02(6): it's snowing, move to intercept Santa Claus
+Helicopter #H03(7): it's snowing, move to intercept Santa Claus
+Helicopter #H04(8): it's snowing, move to intercept Santa Claus
+Baloon #B01(9): get us lower, we are flying through pea soup
+Baloon #B02(10): this thing does not run on cold air
+Tower Says: Baloon #B02(10): has been unrergistered
+Baloon #B03(11): get us lower, we are flying through pea soup
+Baloon #B04(12): get us lower, we are flying through pea soup
+JetFighter #J01(1): flying in the sun is so much fun
+JetFighter #J02(2): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J02(2): has been unrergistered
+JetFighter #J03(3): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J03(3): has been unrergistered
+JetFighter #J04(4): that thing about winter that guy from that tv show once said
+Helicopter #H01(5): it's snowing, move to intercept Santa Claus
+Tower says: Helicopter #H01(5): has been unrergistered
+Helicopter #H02(6): it's snowing, move to intercept Santa Claus
+Tower says: Helicopter #H02(6): has been unrergistered
+Helicopter #H03(7): it's snowing, move to intercept Santa Claus
+Helicopter #H04(8): it's snowing, move to intercept Santa Claus
+Baloon #B01(9): get us lower, we are flying through pea soup
+Baloon #B02(10): this thing does not run on cold air
+Tower Says: Baloon #B02(10): has been unrergistered
+Baloon #B03(11): get us lower, we are flying through pea soup
+Baloon #B04(12): get us lower, we are flying through pea soup
+Tower Says: Baloon #B04(12): has been unrergistered
+
+
+
+
+
+
+
+
+
+Tower says: JetPlane #J01(1): has been rergistered
+Tower says: JetPlane #J02(2): has been rergistered
+Tower says: JetPlane #J03(3): has been rergistered
+Tower says: JetPlane #J04(4): has been rergistered
+Tower says: Helicopter #H01(5): has been rergistered
+Tower says: Helicopter #H02(6): has been rergistered
+Tower says: Helicopter #H03(7): has been rergistered
+Tower says: Helicopter #H04(8): has been rergistered
+Tower Says: Baloon #B01(9): registered to weather tower
+Tower Says: Baloon #B02(10): registered to weather tower
+Tower Says: Baloon #B03(11): registered to weather tower
+Tower Says: Baloon #B04(12): registered to weather tower
+
+JetFighter #J01(1): flying in the sun is so much fun
+JetFighter #J02(2): it's raining hard here
+JetFighter #J03(3): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J03(3): has been unrergistered
+JetFighter #J04(4): it's raining hard here
+Helicopter #H01(5): silly fog, I can just fly over you
+Helicopter #H02(6): the sun is blinding me
+Helicopter #H03(7): helicopters are not afraid to get wet
+Helicopter #H04(8): it's snowing, move to intercept Santa Claus
+Baloon #B01(9): make twoards the rising sun
+Baloon #B02(10): this thing does not run on cold air
+Baloon #B03(11): get us lower, we are flying through pea soup
+Baloon #B04(12): get us lower, we are flying through pea soup
+JetFighter #J01(1): flying in the sun is so much fun
+JetFighter #J02(2): that thing about winter that guy from that tv show once said
+JetFighter #J03(3): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J03(3): has been unrergistered
+JetFighter #J04(4): that thing about winter that guy from that tv show once said
+Helicopter #H01(5): it's snowing, move to intercept Santa Claus
+Tower says: Helicopter #H01(5): has been unrergistered
+Helicopter #H02(6): silly fog, I can just fly over you
+Helicopter #H03(7): silly fog, I can just fly over you
+Helicopter #H04(8): it's snowing, move to intercept Santa Claus
+Baloon #B01(9): get us lower, we are flying through pea soup
+Baloon #B02(10): this thing does not run on cold air
+Tower Says: Baloon #B02(10): has been unrergistered
+Baloon #B03(11): get us lower, we are flying through pea soup
+Baloon #B04(12): get us lower, we are flying through pea soup
+JetFighter #J01(1): flying in the sun is so much fun
+JetFighter #J02(2): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J02(2): has been unrergistered
+JetFighter #J03(3): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J03(3): has been unrergistered
+JetFighter #J04(4): that thing about winter that guy from that tv show once said
+Helicopter #H01(5): it's snowing, move to intercept Santa Claus
+Tower says: Helicopter #H01(5): has been unrergistered
+Helicopter #H02(6): it's snowing, move to intercept Santa Claus
+Helicopter #H03(7): it's snowing, move to intercept Santa Claus
+Helicopter #H04(8): it's snowing, move to intercept Santa Claus
+Baloon #B01(9): get us lower, we are flying through pea soup
+Baloon #B02(10): this thing does not run on cold air
+Tower Says: Baloon #B02(10): has been unrergistered
+Baloon #B03(11): get us lower, we are flying through pea soup
+Baloon #B04(12): get us lower, we are flying through pea soup
+JetFighter #J01(1): flying in the sun is so much fun
+JetFighter #J02(2): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J02(2): has been unrergistered
+JetFighter #J03(3): that thing about winter that guy from that tv show once said
+Tower says: JetPlane #J03(3): has been unrergistered
+JetFighter #J04(4): that thing about winter that guy from that tv show once said
+Helicopter #H01(5): it's snowing, move to intercept Santa Claus
+Tower says: Helicopter #H01(5): has been unrergistered
+Helicopter #H02(6): it's snowing, move to intercept Santa Claus
+Tower says: Helicopter #H02(6): has been unrergistered
+Helicopter #H03(7): it's snowing, move to intercept Santa Claus
+Helicopter #H04(8): it's snowing, move to intercept Santa Claus
+Baloon #B01(9): get us lower, we are flying through pea soup
+Baloon #B02(10): this thing does not run on cold air
+Tower Says: Baloon #B02(10): has been unrergistered
+Baloon #B03(11): get us lower, we are flying through pea soup
+Baloon #B04(12): get us lower, we are flying through pea soup
+Tower Says: Baloon #B04(12): has been unrergistered
+
+
+
+
+
+
+
+

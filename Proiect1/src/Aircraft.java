@@ -1,18 +1,14 @@
-import java.io.PrintWriter;
-
 public class Aircraft {
 	
 	protected long  Id; 
 	protected String name;
 	protected Coordinates coordinates;
-	private long idCounter;
+	private static long idCounter = 0;
 	
 	public long getId() {
 		return Id;
 	}
-	public void setId(long id) {
-		Id = id;
-	}
+	
 	public String getName() {
 		return name;
 	}
@@ -35,12 +31,7 @@ public class Aircraft {
 		
 		this.name = name;
 		this.coordinates = coordinates;
+		this.Id = ++idCounter;
 	}
-	
-	private long nextId() {
-        Id = getIdCounter() +1;
-        idCounter++;
-        return Id;
-    }
 
 }

@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Program {
@@ -20,17 +23,18 @@ public class Program {
 					Integer.parseInt(FileReader.fileList.get(i)[3]), Integer.parseInt(FileReader.fileList.get(i)[4])));
 		}
 		
-		for (int j = 0; j < ar.size(); j++) {
-			ar.get(j).registerTower(wthrTower);
+		try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
+			for (int j = 0; j < ar.size(); j++) {
+				ar.get(j).registerTower(wthrTower);
+			}
+			out.println("");
+			out.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
 		
-		for(int count = 0; count<Integer.parseInt(FileReader.fileList.get(0)[0]); count++) {
-			int i=0;
-			for(Flyable elements: ar) {
-			wthrTower.conditionsChanged();				
-				i++;
-			}
-		}
+		for(int count = 0; count<Integer.parseInt(FileReader.fileList.get(0)[0]); count++) { 
+			wthrTower.conditionsChanged();	
+		}	
 	}
-
 }
