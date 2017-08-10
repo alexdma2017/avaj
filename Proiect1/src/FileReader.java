@@ -41,7 +41,8 @@ public class FileReader {
 		
 		} 
 		catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Please specify the input file");
+			System.exit(1);
 		}
 		
 		catch (NumberFormatException n) {

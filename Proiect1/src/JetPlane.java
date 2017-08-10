@@ -31,7 +31,7 @@ public class JetPlane extends Aircraft  implements Flyable{
 		
 		case WeatherType.RAIN:
 			coordinates.setLatitude(coordinates.getLatitude()+5);
-			text ="JetFighter #" + this.getName() + "(" + this.getId() + "): it's raining hard here";
+			text ="JetPlane #" + this.getName() + "(" + this.getId() + "): it's raining hard here";
 			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
 				out.println(text);
 			} catch (FileNotFoundException e) {
@@ -42,7 +42,7 @@ public class JetPlane extends Aircraft  implements Flyable{
 		case WeatherType.SUN:
 			coordinates.setHeight(coordinates.getHeight()+2);
 			coordinates.setLatitude(coordinates.getLatitude()+10);
-			text ="JetFighter #" + this.getName() + "(" + this.getId() + "): flying in the sun is so much fun";
+			text ="JetPlane #" + this.getName() + "(" + this.getId() + "): flying in the sun is so much fun";
 			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
 				out.println(text);
 			} catch (FileNotFoundException e) {
@@ -52,7 +52,7 @@ public class JetPlane extends Aircraft  implements Flyable{
 		
 		case WeatherType.SNOW:
 			coordinates.setHeight(coordinates.getHeight()-7);
-			text ="JetFighter #" + this.getName() + "(" + this.getId() + "): that thing about winter that guy from that tv show once said";
+			text ="JetPlane #" + this.getName() + "(" + this.getId() + "): that thing about winter that guy from that tv show once said";
 			try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
 				out.println(text);
 			} catch (FileNotFoundException e) {

@@ -23,13 +23,6 @@ public abstract class Tower{
 		
 	}
 	
-	/*public void notifyAircraft() {
-		for(int i=0; i<=observerList.size(); i++) {
-			observers=observerList.get(i);
-			observers.updateConditions();
-		}
-	}*/
-	
 	protected void conditionsChanged(){
 		
 		for(int i=0; i<observerList.size(); i++) {

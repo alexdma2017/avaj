@@ -1,11 +1,13 @@
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class Program {
 
-	public static void main(String[] args) throws TypeException, HeightException {
+	public static void main(String[] args) throws TypeException, HeightException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
 		FileReader input = new FileReader();
 		FileWriter output = new FileWriter();
@@ -14,7 +16,10 @@ public class Program {
 		output.fileWriter();
 		
 		ConcreteAircraftFactory factory = new ConcreteAircraftFactory();
-		WeatherTower wthrTower = new WeatherTower();
+		WeatherTower weatherTower = new WeatherTower();
+		
+		Method m = WeatherTower.class.getDeclaredMethod("changeWeather");
+		m.setAccessible(true);
 		
 		ArrayList<Flyable> ar = new ArrayList<Flyable>();
 		
@@ -25,7 +30,7 @@ public class Program {
 		
 		try(PrintWriter out = new PrintWriter(new FileOutputStream("Simulation.txt", true))){
 			for (int j = 0; j < ar.size(); j++) {
-				ar.get(j).registerTower(wthrTower);
+				ar.get(j).registerTower(weatherTower);
 			}
 			out.println("");
 			out.close();
@@ -34,7 +39,7 @@ public class Program {
 		}
 		
 		for(int count = 0; count<Integer.parseInt(FileReader.fileList.get(0)[0]); count++) { 
-			wthrTower.conditionsChanged();	
+			m.invoke(weatherTower);	
 		}	
 	}
 }
